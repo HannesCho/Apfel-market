@@ -3,7 +3,16 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply text-white bg-slate-800;
+  }
   a {
     @apply text-red-500;
+  }
+}
+
+@layer components {
+  .primary-btn {
+    @apply w-full h-8 bg-red-500 rounded-md hover:bg-red-400;
   }
 }
