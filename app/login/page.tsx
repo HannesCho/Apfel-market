@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function LoginPage() {
   return (
-    <div className="flex flex-col items-center justify-between min-h-screen">
+    <div className="flex flex-col items-center justify-between min-h-screen bg-slate-400">
       <div className="flex flex-col items-center my-auto *:font-medium gap-3">
         <span className="text-9xl opacity-80">🍎</span>
         <h1 className="text-4xl">Apfel</h1>
