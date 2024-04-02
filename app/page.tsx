@@ -1,33 +1,32 @@
-export default function Home() {
+import Link from "next/link";
+
+export default function LandingPage() {
   return (
-    <main className="flex items-center justify-center h-screen p-5 bg-gray-200">
-      <div className="w-full p-5 bg-white shadow-lg rounded-3xl">
-        <div className="flex items-center justify-between">
-          <div className="flex flex-col">
-            <span className="-mb-1 font-semibold text-gray-600">
-              In Transit
-            </span>
-            <span className="text-4xl font-semibold">Coolblue</span>
-          </div>
-          <div className="bg-orange-400 rounded-full size-12" />
-        </div>
-        <div className="flex items-center gap-2 my-3">
-          <span className="bg-green-400 text-white font-semibold px-2.5 py-1.5 rounded-full uppercase">
-            Today
+    <div className="flex flex-col items-center justify-between min-h-screen">
+      <div className="flex flex-col items-center my-auto *:font-medium gap-3">
+        <span className="text-9xl opacity-80">🍎</span>
+        <h1 className="text-4xl">Apfel</h1>
+        <h2 className="text-2xl">Willkommen auf dem Apfel Markt!</h2>
+      </div>
+      <div className="flex flex-col items-center justify-center gap-3">
+        <Link
+          href="/create-account"
+          className="w-full p-2.5 text-center text-white bg-red-500 focus:bg-red-400 rounded-2xl font-medium text-xl"
+        >
+          Anfangen
+        </Link>
+        <div className="flex gap-3">
+          <span className="text-lg text-neutral-600">
+            Haben Sie bereits ein Konto?
           </span>
-          <span className="font-medium text-gray-600">9:30-10:30u</span>
-        </div>
-        <div className="relative mb-6">
-          <div className="absolute w-full h-2 bg-gray-400 rounded-full" />
-          <div className="absolute w-2/3 h-2 bg-green-400 rounded-full" />
-        </div>
-        <div className="flex items-center justify-between">
-          <span>Expected</span>
-          <span>Sorting center</span>
-          <span>Intransit</span>
-          <span className="text-gray-400">Delivered</span>
+          <Link
+            href="login"
+            className="text-lg hover:underline hover:underline-offset-1"
+          >
+            Anmelden
+          </Link>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
