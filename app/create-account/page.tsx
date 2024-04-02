@@ -1,6 +1,8 @@
-import { ChatBubbleOvalLeftEllipsisIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
 import Input from "../../components/input";
+import FormButton from "@/components/form-btn";
+import SnsButton from "@/components/sns-btn";
+import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
+import { FaGithub } from "react-icons/fa";
 
 export default function CreateAccount() {
   return (
@@ -21,21 +23,20 @@ export default function CreateAccount() {
           required
           errors={[]}
         />
-        <button className="w-full h-8 bg-red-500 rounded-md hover:bg-red-400">
-          Konto erstellen
-        </button>
+        <FormButton loading={false} text="Konto erstellen" />
       </form>
       <div className="w-full h-[1px] bg-slate-500" />
-      <div>
-        <Link
+      <div className="flex flex-col gap-3">
+        <SnsButton
           href="/sms"
-          className="flex flex-row items-center justify-center gap-3 text-white primary-btn"
-        >
-          <span>
-            <ChatBubbleOvalLeftEllipsisIcon className="size-6" />
-          </span>
-          <span>Per SMS anmelden</span>
-        </Link>
+          text="Per SMS anmelden"
+          Icon={IoChatbubbleEllipsesOutline}
+        />
+        <SnsButton
+          href="/github/start"
+          text="Per Github anmelden"
+          Icon={FaGithub}
+        />
       </div>
     </div>
   );
