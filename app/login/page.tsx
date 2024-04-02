@@ -1,31 +1,33 @@
-import Link from "next/link";
+import Input from "../../components/input";
+import FormButton from "@/components/form-btn";
+import SnsButton from "@/components/sns-btn";
+import { FaGithub } from "react-icons/fa";
+import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 
-export default function LoginPage() {
+export default function Login() {
   return (
-    <div className="flex flex-col items-center justify-between min-h-screen">
-      <div className="flex flex-col items-center my-auto *:font-medium gap-3">
-        <span className="text-9xl opacity-80">🍎</span>
-        <h1 className="text-4xl">Apfel</h1>
-        <h2 className="text-2xl">Willkommen auf dem Apfel Markt!</h2>
+    <div className="flex flex-col gap-10 *:font-medium px-10 py-8">
+      <div className="*:font-medium">
+        <h1 className="text-3xl">Hallo!</h1>
+        <h2 className="text-2xl">Mit E-Mail und Passwort anmelden</h2>
       </div>
-      <div className="flex flex-col items-center justify-center gap-3">
-        <Link
-          href="/create-account"
-          className="w-full p-2.5 text-center text-white bg-red-500 focus:bg-red-400 rounded-2xl font-medium text-xl"
-        >
-          Anfangen
-        </Link>
-        <div className="flex gap-3">
-          <span className="text-lg text-neutral-600">
-            Haben Sie bereits ein Konto?
-          </span>
-          <Link
-            href="login"
-            className="text-lg hover:underline hover:underline-offset-1"
-          >
-            Anmelden
-          </Link>
-        </div>
+      <form className="flex flex-col gap-3">
+        <Input type="email" placeholder="Email" required errors={[]} />
+        <Input type="password" placeholder="Passwort" required errors={[]} />
+        <FormButton loading={false} text="Anmelden" />
+      </form>
+      <div className="w-full h-[1px] bg-slate-500" />
+      <div className="flex flex-col gap-3">
+        <SnsButton
+          href="/sms"
+          text="Per SMS anmelden"
+          Icon={IoChatbubbleEllipsesOutline}
+        />
+        <SnsButton
+          href="/github/start"
+          text="Per Github anmelden"
+          Icon={FaGithub}
+        />
       </div>
     </div>
   );
