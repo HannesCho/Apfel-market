@@ -1,0 +1,13 @@
+{
+  "Home": {
+    "title": "Apfel Market",
+    "description": ""
+  },
+  "Landing": {
+    "h1": "Apfel",
+    "h2": "Willkommen auf dem Apfel Markt!",
+    "start-btn": "Anfangen",
+    "have-account-text": "Haben Sie bereits ein Konto?",
+    "login-text": "Anmelden"
+  }
+}

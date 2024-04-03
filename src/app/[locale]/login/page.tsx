@@ -1,4 +1,4 @@
-import Input from "../../components/input";
+import Input from "../../../../components/input";
 import FormButton from "@/components/form-btn";
 import SnsButton from "@/components/sns-btn";
 import { FaGithub } from "react-icons/fa";
