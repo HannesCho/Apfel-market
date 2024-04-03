@@ -1,29 +1,38 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
-export default function LandingPage() {
+interface Props {
+  params: {
+    locale: string;
+  };
+}
+
+export default function LandingPage({ params: { locale } }: Props) {
+  const t = useTranslations("Landing");
+
   return (
     <div className="flex flex-col items-center justify-between min-h-screen">
       <div className="flex flex-col items-center my-auto *:font-medium gap-3">
         <span className="text-9xl opacity-80">🍎</span>
-        <h1 className="text-4xl">Apfel</h1>
-        <h2 className="text-2xl">Willkommen auf dem Apfel Markt!</h2>
+        <h1 className="text-4xl">{t("h1")}</h1>
+        <h2 className="text-2xl">{t("h2")}</h2>
       </div>
       <div className="flex flex-col items-center justify-center gap-3">
         <Link
-          href="/create-account"
+          href={`${locale}/create-account`}
           className="w-full p-2.5 text-center text-white bg-red-500 focus:bg-red-400 rounded-2xl font-medium text-xl"
         >
-          Anfangen
+          {t("start-btn")}
         </Link>
         <div className="flex gap-3">
           <span className="text-lg text-neutral-600">
-            Haben Sie bereits ein Konto?
+            {t("have-account-text")}
           </span>
           <Link
-            href="login"
+            href={`${locale}/login`}
             className="text-lg hover:underline hover:underline-offset-1"
           >
-            Anmelden
+            {t("login-text")}
           </Link>
         </div>
       </div>

@@ -1,0 +1,24 @@
+{
+  "Home": {
+    "title": "Apple Market",
+    "description": "Sell and Buy with your neigbors"
+  },
+  "Landing": {
+    "h1": "Apple",
+    "h2": "Welcome to the Apple Market!",
+    "start-btn": "Start",
+    "have-account-text": "Do you already have an account?",
+    "login-text": "Login"
+  },
+  "CreateAccount": {
+    "h1": "Hello!",
+    "h2": "Fill out the From to sign up",
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "confirmed-password": "Confirm Password",
+    "sign-up": "Sing Up",
+    "SMS": "Contiune with SMS",
+    "Github": "Continue with Github"
+  }
+}

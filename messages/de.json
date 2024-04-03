@@ -1,0 +1,24 @@
+{
+  "Home": {
+    "title": "Apfel Market",
+    "description": ""
+  },
+  "Landing": {
+    "h1": "Apfel",
+    "h2": "Willkommen auf dem Apfel Markt!",
+    "start-btn": "Anfangen",
+    "have-account-text": "Haben Sie bereits ein Konto?",
+    "login-text": "Anmelden"
+  },
+  "CreateAccount": {
+    "h1": "Hallo!",
+    "h2": "Untenstehendes Formular ausfüllen, um beizutreten",
+    "username": "Benutzername",
+    "email": "Email",
+    "password": "Passwort",
+    "confirmed-password": "Passwort bestätigen",
+    "sign-up": "Konto erstellen",
+    "SMS": "Per SMS anmelden",
+    "Github": "Per Github anmelden"
+  }
+}
