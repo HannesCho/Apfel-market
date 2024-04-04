@@ -20,5 +20,12 @@
     "sign-up": "Konto erstellen",
     "SMS": "Per SMS anmelden",
     "Github": "Per Github anmelden"
+  },
+  "Login": {
+    "h1": "Hallo!",
+    "h2": "Mit E-Mail und Passwort anmelden",
+    "email": "Email",
+    "password": "Passwort",
+    "login": "Anmelden"
   }
 }

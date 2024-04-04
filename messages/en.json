@@ -20,5 +20,12 @@
     "sign-up": "Sing Up",
     "SMS": "Contiune with SMS",
     "Github": "Continue with Github"
+  },
+  "Login": {
+    "h1": "Hello!",
+    "h2": "Log in with Email and Password",
+    "email": "Email",
+    "password": "Password",
+    "login": "Login"
   }
 }
