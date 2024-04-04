@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ReactNode } from "react";
 import { locales } from "@/src/config";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export function generateStaticParams() {
 }
 
 export default function RootLayout({ children, params: { locale } }: Props) {
+  unstable_setRequestLocale(locale);
   return (
     <html lang={locale}>
       <body className={inter.className}>{children}</body>

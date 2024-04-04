@@ -1,13 +1,9 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-interface Props {
-  params: {
-    locale: string;
-  };
-}
-
-export default function LandingPage({ params: { locale } }: Props) {
+export default function LandingPage(props: { params: { locale: string } }) {
+  unstable_setRequestLocale(props.params.locale);
   const t = useTranslations("Landing");
 
   return (
@@ -19,7 +15,7 @@ export default function LandingPage({ params: { locale } }: Props) {
       </div>
       <div className="flex flex-col items-center justify-center gap-3">
         <Link
-          href={`${locale}/create-account`}
+          href={`${props.params.locale}/create-account`}
           className="w-full p-2.5 text-center text-white bg-red-500 focus:bg-red-400 rounded-2xl font-medium text-xl"
         >
           {t("start-btn")}
@@ -29,7 +25,7 @@ export default function LandingPage({ params: { locale } }: Props) {
             {t("have-account-text")}
           </span>
           <Link
-            href={`${locale}/login`}
+            href={`${props.params.locale}/login`}
             className="text-lg hover:underline hover:underline-offset-1"
           >
             {t("login-text")}

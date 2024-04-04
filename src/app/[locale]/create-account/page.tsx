@@ -4,8 +4,10 @@ import SnsButton from "@/components/sns-btn";
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 import { useTranslations } from "next-intl";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function CreateAccount() {
+export default function CreateAccount(props: { params: { locale: string } }) {
+  unstable_setRequestLocale(props.params.locale);
   const t = useTranslations("CreateAccount");
 
   return (

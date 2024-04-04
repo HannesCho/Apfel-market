@@ -1,7 +1,9 @@
 import Input from "../../../../components/input";
 import FormButton from "@/components/form-btn";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function SMSLogin() {
+export default function SMSLogin(props: { params: { locale: string } }) {
+  unstable_setRequestLocale(props.params.locale);
   return (
     <div className="flex flex-col gap-10 *:font-medium px-10 py-8">
       <div className="*:font-medium">

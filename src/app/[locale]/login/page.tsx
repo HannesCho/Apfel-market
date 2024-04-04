@@ -3,8 +3,10 @@ import FormButton from "@/components/form-btn";
 import SnsButton from "@/components/sns-btn";
 import { FaGithub } from "react-icons/fa";
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function Login() {
+export default function Login(props: { params: { locale: string } }) {
+  unstable_setRequestLocale(props.params.locale);
   return (
     <div className="flex flex-col gap-10 *:font-medium px-10 py-8">
       <div className="*:font-medium">
