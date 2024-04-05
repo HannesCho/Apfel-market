@@ -8,5 +8,7 @@ const config: Config = {
   ],
   theme: {},
   plugins: [],
+  darkMode: "selector",
 };
+
 export default config;

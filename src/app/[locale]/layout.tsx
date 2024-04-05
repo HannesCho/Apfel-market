@@ -4,6 +4,7 @@ import "./globals.css";
 import { ReactNode } from "react";
 import { locales } from "@/src/config";
 import { unstable_setRequestLocale } from "next-intl/server";
+import DarkBtn from "@/components/darkmode-btn";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +26,10 @@ export default function RootLayout({ children, params: { locale } }: Props) {
   unstable_setRequestLocale(locale);
   return (
     <html lang={locale}>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <DarkBtn />
+        {children}
+      </body>
     </html>
   );
 }
