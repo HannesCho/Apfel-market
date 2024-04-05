@@ -36,11 +36,17 @@ export default function CreateAccount(props: { params: { locale: string } }) {
       <div className="w-full h-[1px] bg-slate-500" />
       <div className="flex flex-col gap-3">
         <SnsButton
-          href="/sms"
+          locale={props.params.locale}
+          href={"/sms"}
           text={t("SMS")}
           Icon={IoChatbubbleEllipsesOutline}
         />
-        <SnsButton href="/github/start" text={t("Github")} Icon={FaGithub} />
+        <SnsButton
+          locale={props.params.locale}
+          href={"/github/start"}
+          text={t("Github")}
+          Icon={FaGithub}
+        />
       </div>
     </div>
   );
