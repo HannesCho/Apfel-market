@@ -27,5 +27,12 @@
     "email": "Email",
     "password": "Passwort",
     "login": "Anmelden"
+  },
+  "SMS": {
+    "h1": "SMS-Anmeldung",
+    "h2": "Überprüfen Sie Ihre Telefonnummer",
+    "telephoe": "Telefonnummer",
+    "verification": "Verifizierungscode",
+    "verify": "Überprüfen"
   }
 }

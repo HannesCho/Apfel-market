@@ -27,5 +27,12 @@
     "email": "Email",
     "password": "Password",
     "login": "Login"
+  },
+  "SMS": {
+    "h1": "SMS-Login",
+    "h2": "Confirm your telephone number",
+    "telephoe": "Telephone Number",
+    "verification": "Varification Code",
+    "verify": "Veryfy"
   }
 }
